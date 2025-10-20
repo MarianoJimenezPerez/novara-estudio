@@ -1,0 +1,5 @@
+/* Fuentes de respaldo de Google Fonts - debe estar al inicio */
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap");
+
+/* Fuentes de la marca Novara estudio */
+/* Como las fuentes .woff no están disponibles, se usarán las de respaldo (Space Grotesk e Inter) */
