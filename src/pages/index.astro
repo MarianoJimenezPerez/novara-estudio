@@ -8,19 +8,19 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 ---
 
 <Layout>
-	<main class="relative min-h-screen overflow-hidden flex flex-col bg-animated">
+	<main class="relative h-[100dvh] overflow-hidden flex flex-col bg-animated">
 		<!-- Main Content -->
-		<div class="flex-1 flex items-center justify-center px-6 py-20 relative z-10">
+		<div class="flex-1 flex items-center justify-center px-6 py-8 md:py-12 relative z-10">
 			<div class="max-w-7xl w-full text-center">
 				<!-- Logo Principal -->
-				<div class="mb-16 md:mb-[8rem]">
+				<div class="mb-8 md:mb-12 lg:mb-16">
 					<h1 class="leading-none opacity-0 animate-fade-in-up animation-delay-300 mx-auto flex justify-center">
 						<Image src="/logo_desktop.svg" alt="Novara estudio" width={562} height={67}/>
 					</h1>
 				</div>
 				
 				<!-- Message -->
-				<div class="mt-16 md:mt-20 mb-2 opacity-0 animate-fade-in-up animation-delay-600">
+				<div class="mt-8 md:mt-12 mb-2 opacity-0 animate-fade-in-up animation-delay-600">
 					<p class="text-xl lg:text-2xl font-medium text-[#DCDBCF] mb-4 tracking-tight">
 						Próximamente
 					</p>
@@ -34,7 +34,7 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 				<div class="w-44 md:w-[400px] h-1 mt-8 bg-gradient-verde mx-auto rounded-full opacity-0 animate-fade-in-up animation-delay-900"></div>
 
 				<!-- Redes Sociales -->
-				<div class="mt-12 md:mt-16 flex items-center justify-center gap-6 md:gap-8 opacity-0 animate-fade-in-up animation-delay-1200 mb-10">
+				<div class="mt-8 md:mt-12 flex items-center justify-center gap-6 md:gap-8 opacity-0 animate-fade-in-up animation-delay-1200 mb-6">
 					<a 
 						href="https://www.linkedin.com/company/novaraestudio" 
 						target="_blank" 
