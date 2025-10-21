@@ -21,17 +21,17 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 				
 				<!-- Message -->
 				<div class="mt-16 md:mt-20 mb-2 opacity-0 animate-fade-in-up animation-delay-600">
-					<p class="text-lg md:text-xl lg:text-2xl font-medium text-[#DCDBCF] mb-4 tracking-tight">
+					<p class="text-xl lg:text-2xl font-medium text-[#DCDBCF] mb-4 tracking-tight">
 						Próximamente
 					</p>
-					<p class="text-xs md:text-sm lg:text-base text-[#DCDBCF] leading-relaxed max-w-2xl mx-auto font-bureau font-light">
+					<p class="text-md lg:text-base text-[#DCDBCF] leading-relaxed max-w-2xl mx-auto font-bureau font-light">
 						Estamos ocupados creando sitios increíbles para nuestros clientes.<br class="hidden sm:block" />
 						Aún no hemos tenido tiempo de terminar el nuestro.
 					</p>
 				</div>
 
 				<!-- Accent Bar with Gradient -->
-				<div class="w-32 md:w-[400px] h-1 mt-8 bg-gradient-verde mx-auto rounded-full opacity-0 animate-fade-in-up animation-delay-900"></div>
+				<div class="w-44 md:w-[400px] h-1 mt-8 bg-gradient-verde mx-auto rounded-full opacity-0 animate-fade-in-up animation-delay-900"></div>
 
 				<!-- Redes Sociales -->
 				<div class="mt-12 md:mt-16 flex items-center justify-center gap-6 md:gap-8 opacity-0 animate-fade-in-up animation-delay-1200 mb-10">
@@ -66,12 +66,24 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 		<div class="absolute bottom-0 left-0 right-0 pointer-events-none">
 			<div class="relative w-full h-full max-w-7xl mx-auto">
 				<!-- Anillo dark (atrás) -->
-				<div class="absolute bottom-0 left-1/2 translate-x-[-30%] z-10 translate-y-[10%]">
-					<Image src="/anillo_dark.svg" alt="Anillos" width={514} height={254}/>
+				<div class="absolute -bottom-2 sm:-bottom-4 md:-bottom-6 left-1/2 translate-x-[-30%] z-10 opacity-0 animate-rings-fade-in animation-delay-1500">
+					<Image 
+						src="/anillo_dark.svg" 
+						alt="Anillos" 
+						width={800} 
+						height={400}
+						class="!w-[90vw] sm:!w-[80vw] md:!w-[70vw] lg:!w-[60vw] xl:!w-[514px] !h-auto max-w-none"
+					/>
 				</div>
 				<!-- Anillo light (adelante, ligeramente superpuesto) -->
-				<div class="absolute bottom-0 left-1/2 translate-x-[-70%] z-20 translate-y-[10%]">
-					<Image src="/anillo_light.svg" alt="Anillos" width={514} height={254}/>
+				<div class="absolute -bottom-2 sm:-bottom-4 md:-bottom-6 left-1/2 translate-x-[-70%] z-20 opacity-0 animate-rings-fade-in animation-delay-1500">
+					<Image 
+						src="/anillo_light.svg" 
+						alt="Anillos" 
+						width={800} 
+						height={400}
+						class="!w-[90vw] sm:!w-[80vw] md:!w-[70vw] lg:!w-[60vw] xl:!w-[514px] !h-auto max-w-none"
+					/>
 				</div>
 			</div>
 		</div>
@@ -125,12 +137,25 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 		}
 	}
 
+	@keyframes rings-fade-in {
+		from {
+			opacity: 0;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+
 	.animate-fade-in {
 		animation: fade-in 1s ease-out forwards;
 	}
 
 	.animate-fade-in-up {
 		animation: fade-in-up 1s ease-out forwards;
+	}
+
+	.animate-rings-fade-in {
+		animation: rings-fade-in 1s ease-out forwards;
 	}
 
 	.animation-delay-300 {
@@ -147,5 +172,13 @@ Astro.response.headers.set('Retry-After', '604800'); // 7 días en segundos
 
 	.animation-delay-1200 {
 		animation-delay: 1.2s;
+	}
+
+	.animation-delay-1500 {
+		animation-delay: 1.5s;
+	}
+
+	.animation-delay-1800 {
+		animation-delay: 1.8s;
 	}
 </style>
