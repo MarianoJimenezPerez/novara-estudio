@@ -21,7 +21,7 @@ export default {
         bureau: ['"Non Bureau"', "Inter", "sans-serif"],
       },
       backgroundImage: {
-        "gradient-verde": "linear-gradient(90deg, #14fe7d 0%, #0c9486 100%)",
+        "gradient-verde": "linear-gradient(90deg, #b8f00f 0%, #18ef77 100%)",
       },
     },
   },
